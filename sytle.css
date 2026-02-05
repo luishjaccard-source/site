@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(Desenho\ de\ fundo\ de\ formas\ pretas\ abstratas\ _\ Vetor\ Grátis.jpeg);
+  font-family: Arial, sans-serif;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espaço entre os cilindros */
+}
+
+.cilindro {
+  width: 600px;
+  height: 68px;
+  background: linear-gradient(to bottom, #000000, #000000);
+  border-radius: 100px; /* isso cria o formato de cilindro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.cilindro:hover {
+  transform: scale(1.05);
+}
