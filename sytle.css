@@ -1,64 +1,74 @@
-/* Reset básico */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* BODY */
 body {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: linear-gradient(135deg, #25D366, #128C7E);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
+  background: #ffffff;
   width: 100%;
-  max-width: 420px; /* ideal pra celular */
-  padding: 20px;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 20px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Título */
-h1 {
-  font-size: 22px;
-  margin-bottom: 20px;
+/* TÍTULO */
+.container h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
 }
 
-/* Botões */
-.cilindro {
+/* BOTÕES */
+.botao {
   display: block;
   width: 100%;
   padding: 16px;
   margin-bottom: 15px;
-  background: #25D366; /* WhatsApp */
+  background: #25D366;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  border-radius: 40px;
+  border-radius: 50px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efeito de toque */
-.cilindro:active {
-  transform: scale(0.97);
+/* EFEITOS */
+.botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* Desktop (se abrir no PC) */
+.botao:active {
+  transform: scale(0.96);
+}
+
+/* DESKTOP */
 @media (min-width: 768px) {
   .container {
-    max-width: 500px;
+    max-width: 480px;
   }
 
-  h1 {
-    font-size: 26px;
+  .container h1 {
+    font-size: 28px;
   }
 
-  .cilindro {
+  .botao {
     font-size: 20px;
   }
 }
