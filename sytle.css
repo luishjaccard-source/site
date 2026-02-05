@@ -1,57 +1,64 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
+  background: #f5f5f5;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
-
-  background-image: url("fundo.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  justify-content: center;
 }
 
+/* Container */
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  max-width: 420px; /* ideal pra celular */
+  padding: 20px;
+  text-align: center;
 }
 
-/* BOTÕES */
+/* Título */
+h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Botões */
 .cilindro {
-  width: 600px;
-  height: 68px;
-  background: linear-gradient(to bottom, #111, #000);
-  border-radius: 100px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 15px;
+  background: #25D366; /* WhatsApp */
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cilindro:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+/* Efeito de toque */
+.cilindro:active {
+  transform: scale(0.97);
 }
 
-/* RESPONSIVO */
-@media (max-width: 700px) {
+/* Desktop (se abrir no PC) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
   .cilindro {
-    width: 90%;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
